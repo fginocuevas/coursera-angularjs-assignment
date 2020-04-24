@@ -30,7 +30,7 @@
         let count= 0;
 
         inputArray.forEach((item)=>{
-            if(item.length > 0){
+            if(item.trim().length > 0 && item.length != 0 && item != ""){
                 count++;
             }
         })
@@ -41,7 +41,7 @@
 
     function checkIfEmpty(input) {
         //console.log("MCI> checkIfEmpty");
-        return input.length < 1;
+        return input.length < 1 || input.replace(/,/g, '').length < 1;
     }
 
 
